@@ -1,0 +1,50 @@
+{
+  "info": {
+    "name": "Facebook API Integration (Real API Default)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Login URL",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/facebook/login-url"
+      }
+    },
+    {
+      "name": "Exchange Code (GET)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/facebook/oauth/exchange?code={{code}}"
+      }
+    },
+    {
+      "name": "List Pages",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/facebook/pages"
+      }
+    },
+    {
+      "name": "List Page Posts",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/facebook/pages/{{pageId}}/posts"
+      }
+    },
+    {
+      "name": "Post Details",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/facebook/posts/{{postId}}/details"
+      }
+    },
+    {
+      "name": "Token Status",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/facebook/token/status"
+      }
+    }
+  ]
+}
