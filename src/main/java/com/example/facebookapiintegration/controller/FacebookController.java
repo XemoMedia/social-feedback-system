@@ -20,7 +20,7 @@ public class FacebookController {
         this.tokenService = tokenService;
     }
 
-    @GetMapping("/login-url")
+    @GetMapping("/oauth/login")
     public ResponseEntity<Map<String, String>> loginUrl() {
         return ResponseEntity.ok(Map.of("login_url", facebookService.generateLoginUrl()));
     }
